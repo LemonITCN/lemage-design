@@ -1,4 +1,4 @@
-# Lemage -- 让照片选择更轻松
+# Lemage — 一个为图片而生的lib
 
 ### 0. 项目说明
 
@@ -10,5 +10,34 @@
 
 ### 1. 功能介绍
 
+#### 1.1. LemageURL说明
+
+- 格式：lemage://图片来源/图片分类/图片标识
+- 图片来源：图片来源目前分为两种
+  - 相册 album：所有从相册中获取到的图片都属于此来源
+  - 沙盒 sandbox：相机拍照、通过UIImage生成的LemageURL都属于此来源
+- 图片分类：
+  - 相册来源目前只有一种分类：local
+  - 沙盒来源目前有两种分类：长期有效 long ， 短期有效 short，相机拍照产生的LemageURL属于短期有效的分类
+- URL举例：
+  - 相册中的图片：lemage://album/local/AA39A4B6-8777-424F-963E-3E40583C8971/L0/001 
+  - 沙盒中的长期图片：lemage://sandbox/long/ed7e24d7-a1f2-45a9-8737-1132c094baf9
+  - 沙盒中的短期图片：lemage://sandbox/short/eac56594-567f-44e9-bbae-38299718d714
+
 #### 1.1. 照片选择器
 
+
+
+通过PHImageManager获取到所有照片的PHAsset对象，拿到PHAsset的localIdentifier字符串
+
+缩略图通过这个方法获取300*300的CGSize的图片
+
+```objective-c
+- (PHImageRequestID)requestImageForAsset:(PHAsset *)asset 
+    						  targetSize:(CGSize)targetSize 
+                             contentMode:(PHImageContentMode)contentMode 
+                                 options:(nullable PHImageRequestOptions *)options 
+                           resultHandler:(void (^)(UIImage *__nullable result, NSDictionary *__nullable info))resultHandler;
+```
+
+lemage://album/
