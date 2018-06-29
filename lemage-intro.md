@@ -6,7 +6,7 @@
 
 ​	很多开发者为了方便，无论是图片选择、还是调用相机进行拍照，都直接调用了系统的相册和相机，但是Android中机型复杂，本身就UI长相大不相同，造成了不同手机上用户体验的不一致，更别说iOS和Android的UI风格统一了。但是要让开发者去写一套完整的相册照片选择、相机拍照、图片预览的功能的话，也的确太耗费工时，会增加很多开发上的时间成本，所以一套成型、美观、各平台UI风格一致的组件看来还是挺有必要存在的。我们的Team也遇到了上述问题，为了方便自己，也方便大家，将此部分源码特意整理成Lib库开放出来，供大家使用，也希望大家能够对控件多多支持，发现问题及时告诉我们，让我们一起来让它变得更好。
 
-![LemageLogo](https://raw.githubusercontent.com/LemonITCN/lemage-design/master/Lemage-WB.png)
+![LemageLogo](https://raw.githubusercontent.com/LemonITCN/lemage-design/master/Lemage.png)
 
 ### 1. 功能介绍
 
